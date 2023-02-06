@@ -9,8 +9,8 @@
 <p *ngIf="!pokemonSelected">Aucun Pokemon trouvé</p>-->
 <div class="container">
   <div class="row">
-    <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
-      <div class="card horizontal">
+    <div *ngFor='let pokemon of pokemonList' class="col m4 s6">
+      <div class="card horizontal"  pkmnBorderCard>
         <div class="card-image">
           <img [src]="pokemon.picture" />
         </div>
