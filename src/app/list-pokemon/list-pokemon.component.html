@@ -1,1 +1,34 @@
-<p>ListePokemon Component</p>
+
+<!-- <input type="number" (click)="selectPokemon($event)"/> -->
+
+<!--<input #input (keyup.enter)="selectPokemon(input.value)" type="number" />-->
+<!--le point d'interogation c'est à dire n'affiche rien s'il y'a une erreur sinon affiche-->
+<!--<p *ngIf="pokemonSelected">
+  Vous avez séléctionné le pokemon:{{ pokemonSelected?.name }}
+</p>
+<p *ngIf="!pokemonSelected">Aucun Pokemon trouvé</p>-->
+<div class="container">
+    <div class="row">
+      <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
+        <div class="card horizontal" pkmnBorderCard>
+          <div class="card-image">
+            <img [src]="pokemon.picture" />
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>{{ pokemon.name }}</p>
+              <p>
+                <small>{{ pokemon.created | date : 'dd/MM/yyyy' }}</small>
+              </p>
+              <span
+                *ngFor="let type of pokemon.types"
+                class="{{ type | pokemonTypeColor }}"
+                >{{ type }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
