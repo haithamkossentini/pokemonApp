@@ -8,6 +8,7 @@ export class Pokemon {
     created: Date;
   
     constructor() {
+
       this.id= 0;
       this.hp=0;
       this.cp=0;
